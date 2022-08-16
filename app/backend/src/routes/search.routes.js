@@ -4,10 +4,6 @@ const { searchedTerms } = require('../data/temporary');
 
 const router = express.Router();
 
-router.get('/', async (_req, res) => {
-  res.status(200).json({ status: 'ok' });
-});
-
 router.get('/:search', async (req, res) => {
   const { search } = req.params;
   const isSearched = searchedTerms.find((item) => item.search === search);
