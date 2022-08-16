@@ -1,6 +1,8 @@
 {
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/jquery": "^3.5.14",
+    "@types/jsdom": "^20.0.0",
     "@types/nightmare": "^2.10.6",
     "eslint": "^8.22.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -102,7 +104,9 @@
     "is-symbol": "^1.0.4",
     "is-weakref": "^1.0.2",
     "isexe": "^2.0.0",
+    "jquery": "^3.6.0",
     "js-yaml": "^4.1.0",
+    "jsdom": "^20.0.0",
     "json-schema-traverse": "^0.4.1",
     "json-stable-stringify-without-jsonify": "^1.0.1",
     "json5": "^1.0.1",

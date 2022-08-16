@@ -1,5 +1,5 @@
 const Nightmare = require('nightmare');
 
-const nightmare = Nightmare();
+const nightmare = new Nightmare();
 
 module.exports = nightmare;

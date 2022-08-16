@@ -1,5 +1,11 @@
 const data = {
-  searchedTerms: [
+  videosSearched: [
+    {
+      search: '',
+      results: [],
+    },
+  ],
+  songsSearched: [
     {
       search: '',
       results: [],
