@@ -3,8 +3,6 @@ import { render, screen } from '@testing-library/react';
 import App from '../../App';
 
 describe('SearchBar component', () => {
-  global.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    json: () => Promise.resolve({ results: [] }) }));
   beforeEach(() => (render(<App />)));
 
   it('Search Input renders', () => {
@@ -26,6 +24,6 @@ describe('SearchBar component', () => {
     const btn = screen.getByRole('button', { name: 'Search' });
     btn.click();
     expect(await screen.findByText('Loading...')).toBeInTheDocument();
-  })
+  });
 
 });
