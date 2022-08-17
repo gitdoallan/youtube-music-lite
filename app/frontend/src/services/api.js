@@ -1,8 +1,9 @@
-const fetchApi = async () => {
-  console.log('fetchApi');
-  const response = await fetch('http://localhost:3001/search/music/britney');
-  const data = await response.json();
+import axios from 'axios';
+
+const fetchApi = async (search) => {
+  const url = 'http://localhost:3001/search/';
+  const { data } = await axios.post(url, { search });
   return data;
-}
+};
 
 export default fetchApi;

@@ -4,8 +4,8 @@ const { videosSearched, songsSearched } = require('../data/temporary');
 
 const router = express.Router();
 
-router.get('/music/:search', async (req, res) => {
-  const { search } = req.params;
+router.post('/', async (req, res) => {
+  const { search } = req.body;
   const isSearched = songsSearched.find((item) => item.search === search);
   if (isSearched) {
     return res.status(200).json(isSearched.results);
@@ -23,6 +23,7 @@ router.get('/music/:search', async (req, res) => {
         if (i === index && index !== array.length - 2) {
           acc = [
             ...acc, {
+              searchPosition: index + 1,
               songId: curr.href.replace('https://music.youtube.com/watch?v=', ''),
               songName: curr.innerText,
               artistId: array[i + 1].href.replace('https://music.youtube.com/channel/', ''),
