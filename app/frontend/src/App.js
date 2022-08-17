@@ -17,12 +17,12 @@ function App() {
     <div>
       { loading
       ? 'Loading...'
-      : data.map((item, index) => (
+      : data.map(( item, index) => (
         <div key={index}>
-          <h1>{item.title}</h1>
-          <p>{item.label}</p>
-          <a href={item.link}>{item.link}</a>
-          </div>
+          { item.songName }
+          {' - '}
+          { item.artistName }
+        </div>
       ))}
     </div>
   );
