@@ -21,16 +21,17 @@ export default function SearchBar() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="search">
+      <label htmlFor="search-input">
         <input
-          id="search"
+          id="search-input"
+          data-testid="search-input"
           type="text"
           value={search}
-          placeholder="Busque por um artista, música ou álbum"
+          placeholder="Search for an artist, album or song"
           onChange={(e) => setSearch(e.target.value)}
         />
       </label>
-      <button type="submit">Buscar</button>
+      <button type="submit">Search</button>
     </form>
   );
 }
